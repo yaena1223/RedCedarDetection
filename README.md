@@ -41,7 +41,7 @@ For annotation, video is divided into 10 frames per second and each frame is ann
 ### 💡 Environment Setting
 1. Install Docker on Ubuntu 20.04 LTS
 2. Build Two Dockerfiles for each algorithm
-    - YOLOv4 : OpenCV 4.5.4 + Darknet + Jupyter Notebook
+    - YOLOv4 : OpenCV 4.5.4 + Google Colab
     - Haar Cascade : OpenCV 4.5.4 + Jupyter Notebook
 3. Haar Cascade
     - Training
