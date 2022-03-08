@@ -30,27 +30,27 @@ Therefore, detecting red cedar is required before the tree matures and is widely
 
 ## Method
 ### 💡 Flowchart
-![flowchart](https://user-images.githubusercontent.com/38778937/146014816-991ec3ae-21c2-45f4-a6f7-e6f61e8d805d.jpg)
+![flowchart](https://user-images.githubusercontent.com/38778937/146697305-7a1f54cc-b6e8-4d3c-ace7-a8b7ea7f8d19.jpg)
 
 
 ### 💡 Data Tagging
-For annotation, video is divided into 10 frames per second and each frame is annotated as a tree tag with V7 tagging tool. The result of these tags is a polygon with a coordinate value of each vertex and bounding box.  
+For annotation, video is divided into 2 frames per second and each frame is annotated as a 'Red cedar' tag with Roboflow tagging tool.  
+The result of these tags is a polygon with a coordinate value of each vertex and bounding box.  
+![roboflow_vertical](https://user-images.githubusercontent.com/38778937/146697291-1e34fa5a-9207-4436-b441-bbc38b08d3d1.jpg)
 
-![data tagging_side](https://user-images.githubusercontent.com/38778937/144276628-07991c13-c5db-4549-9b57-ece8a90506f8.jpg)
 
 ### 💡 Environment Setting
-1. Install Docker on Ubuntu 20.04 LTS
-2. Build Two Dockerfiles for each algorithm
+1. Build environment for each algorithm
     - YOLOv4 : OpenCV 4.5.4 + Google Colab
     - Haar Cascade : OpenCV 4.5.4 + Jupyter Notebook
-3. Haar Cascade
+2. Haar Cascade
     - Training
       - Prepared : OpenCV 3.4, Jupyter Notebook, vector file, Positive Images, Positive text files, Negative Images, Negative text file
       - Result : cascade classifier XML file
     - Testing
       - Prepared : OpenCV 4.5.4, Jupyter Notebook, Trained XML file, Testing video (never used in training)
       - Result : Visualized result with bounding box
-4. YOLOv4
+3. YOLOv4
     - Training
       - Prepared : OpenCV 4.5.4, Darknet, Image frames, Text files with coordinate value of bounding box, Config file
       - Result : YOLOv4 Weight file
